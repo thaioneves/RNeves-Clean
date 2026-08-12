@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rosi Neves Personal Cleaner</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+
+</head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="banner">
+
+        <img src="./FOTO/Logotipo transparente.png" alt="Rosi Neves Personal Cleaner">
+
+    </header>
+<br>
+    <!-- CARD -->
+    <div class="container">
+
+        <!-- INÍCIO -->
+        <div id="inicio">
+
+            <h1>Bem-vindo!</h1>
+
+            <p>Escolha uma opção</p>
+
+            <button onclick="mostrarLogin()">
+                Entrar
+            </button>
+
+            <button onclick="mostrarCadastro()">
+                Cadastrar-se
+            </button>
+
+        </div>
+
+        <!-- LOGIN -->
+        <div id="login" class="oculto">
+
+            <h2>Entrar</h2>
+
+            <input
+                type="email"
+                id="loginEmail"
+                placeholder="Digite seu e-mail">
+
+            <input
+                type="password"
+                id="loginSenha"
+                placeholder="Digite sua senha">
+
+            <button onclick="login()">
+                Entrar
+            </button>
+
+            <p>
+
+                <a href="#" onclick="mostrarRecuperacao()">
+                    Esqueceu sua senha?
+                </a>
+
+            </p>
+
+            <button onclick="voltar()">
+                Voltar
+            </button>
+
+        </div>
+
+        <!-- CADASTRO -->
+        <div id="cadastro" class="oculto">
+
+            <h2>Cadastrar-se</h2>
+
+            <input type="email" placeholder="E-mail">
+
+            <input type="text" placeholder="CPF">
+
+            <input type="text" placeholder="Número de celular">
+
+            <input type="password" placeholder="Senha">
+
+            <button>
+
+
+
+        <!-- RECUPERAÇÃO -->
+        <div id="recuperar" class="oculto">
+
+            <h2>Recuperação de Senha</h2>
+
+            <p>
+
+                Digite seu e-mail para recuperar sua senha.
+
+            </p>
+
+            <input
+                type="email"
+                placeholder="Digite seu e-mail">
+
+            <button>
+
+                Enviar Link
+
+            </button>
+
+            <button onclick="mostrarLogin()">
+
+                Voltar ao Login
+
+            </button>
+
+        </div>
+
+        <!-- ÁREA DO USUÁRIO -->
+        <div id="usuario" class="oculto">
+
+            <h1>Bem-vindo!</h1>
+
+            <p>
+
+                Você entrou no sistema.
+
+            </p>
+
+            <button onclick="logout()">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
