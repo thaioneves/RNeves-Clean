@@ -15,8 +15,8 @@
 
 :root{
 
-    --azul:#0d314e;
-    --azul-claro:#0d314e;
+    --azul:#123B56;
+    --azul-claro:#1C577C;
     --azul-hover:#2A6C96;
     --branco:#FFFFFF;
     --cinza:#F5F7FA;
@@ -36,7 +36,9 @@ body{
 
     background:linear-gradient(
         135deg,
-        #0d314e
+        #123B56,
+        #1C577C,
+        #2A6C96
     );
 
     display:flex;
@@ -233,13 +235,13 @@ button:hover{
 
 .facebook-btn{
 
-    background:#0d314e;
+    background:#1877F2;
 
 }
 
 .facebook-btn:hover{
 
-    background:#0d314e;
+    background:#1668d8;
 
 }
 
@@ -368,183 +370,5 @@ button{
     padding:13px;
 
 }
-
-}
-/* =====================================
-   MATERIAL DE APOIO
-===================================== */
-
-.material-header{
-
-    margin-bottom:30px;
-
-}
-
-.material-header h1{
-
-    font-size:36px;
-
-    color:#24395B;
-
-    margin-bottom:10px;
-
-}
-
-.material-header p{
-
-    color:#666;
-
-    font-size:15px;
-
-}
-
-
-/* =====================================
-   CONTAINER
-===================================== */
-
-.materials-container{
-
-    width:100%;
-
-    background:#fff;
-
-    border-radius:15px;
-
-    padding:30px;
-
-    box-shadow:0 5px 20px rgba(0,0,0,.05);
-
-}
-
-
-/* =====================================
-   CARD
-===================================== */
-
-.material-card{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:25px;
-
-    margin-bottom:25px;
-
-    padding-bottom:25px;
-
-    border-bottom:1px solid #ececec;
-
-}
-
-.material-card:last-child{
-
-    margin-bottom:0;
-
-    padding-bottom:0;
-
-    border-bottom:none;
-
-}
-
-
-/* =====================================
-   ÍCONES
-===================================== */
-
-.material-icon{
-
-    width:75px;
-
-    height:75px;
-
-    border-radius:15px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:42px;
-
-}
-
-.pdf{
-
-    background:#FFE4E4;
-
-    color:#FF3A3A;
-
-}
-
-.excel{
-
-    background:#DFF5F5;
-
-    color:#4A9DA0;
-
-}
-
-
-/* =====================================
-   CONTEÚDO
-===================================== */
-
-.material-content{
-
-    flex:1;
-
-}
-
-.material-content h2{
-
-    color:#24395B;
-
-    margin-bottom:8px;
-
-}
-
-.material-content p{
-
-    color:#666;
-
-    margin-bottom:15px;
-
-}
-
-
-/* =====================================
-   BOTÃO
-===================================== */
-
-.download-btn{
-
-    width:140px;
-
-    height:42px;
-
-    border:1px solid #B7C2D3;
-
-    background:#fff;
-
-    border-radius:12px;
-
-    color:#24395B;
-
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-.download-btn:hover{
-
-    background:#24395B;
-
-    color:#fff;
 
 }
