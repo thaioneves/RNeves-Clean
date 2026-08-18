@@ -1,0 +1,1455 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f7f6f8;
+
+    color: #1e3557;
+}
+
+
+
+/* ==================================================
+   SIDEBAR
+================================================== */
+
+.sidebar {
+
+    width: 280px;
+
+    height: 100vh;
+
+    background: #ffffff;
+
+    border-right: 1px solid #e5e5e5;
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 30px 20px;
+
+}
+
+
+.logo {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+.logo img {
+
+    width: 170px;
+
+}
+
+
+.sidebar nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.sidebar nav a {
+
+    text-decoration: none;
+
+    color: #5b5b5b;
+
+    font-size: 16px;
+
+    padding: 15px 18px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    transition: .3s;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.sidebar nav a i {
+
+    font-size: 18px;
+
+    width: 20px;
+
+    text-align: center;
+
+}
+
+
+.sidebar nav a:hover {
+
+    background: #bed5df;
+
+    color: #0d314e;
+
+}
+
+
+.sidebar nav a.active {
+
+    background: #0d314e;
+
+    color: #ffffff;
+
+    font-weight: 600;
+
+}
+
+
+/* Barrinha lateral */
+
+.sidebar nav a::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 5px;
+
+    height: 100%;
+
+    background: #0d314e;
+
+    transform: scaleY(0);
+
+    transition: .3s;
+
+}
+
+
+.sidebar nav a:hover::before {
+
+    transform: scaleY(1);
+
+}
+
+
+.sidebar nav a.active::before {
+
+    background: #ffffff;
+
+    transform: scaleY(1);
+
+}
+
+
+
+/* ==================================================
+   SUPORTE
+================================================== */
+
+.support-card {
+
+    background: #bed5df;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    margin-top: 30px;
+
+}
+
+
+.support-card h4 {
+
+    color: #0d314e;
+
+    margin-bottom: 10px;
+
+}
+
+
+.support-card p {
+
+    font-size: 14px;
+
+    color: #666;
+
+    margin-bottom: 18px;
+
+}
+
+
+.support-card button {
+
+    width: 100%;
+
+    border: none;
+
+    background: #0d314e;
+
+    color: #ffffff;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: .3s;
+
+}
+
+
+.support-card button:hover {
+
+    background: #9f3f5d;
+
+}
+
+
+
+/* ==================================================
+   CONTAINER
+================================================== */
+
+.container {
+
+    margin-left: 280px;
+
+    width: calc(100% - 280px);
+
+    min-height: 100vh;
+
+    padding: 35px;
+
+}
+
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+
+/* ==================================================
+   PESQUISA
+================================================== */
+
+.search {
+
+    width: 500px;
+
+    height: 52px;
+
+    background: #ffffff;
+
+    border-radius: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+
+}
+
+
+.search input {
+
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    padding: 0 20px;
+
+    font-size: 15px;
+
+    transition: .3s;
+
+}
+
+
+.search input:focus {
+
+    background: #FAFAFF;
+
+}
+
+
+.search button {
+
+    width: 60px;
+
+    height: 100%;
+
+    border: none;
+
+    background: #0d314e;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.search button:hover {
+
+    background: #0d314e;
+
+}
+
+
+
+/* ==================================================
+   ÍCONES HEADER
+================================================== */
+
+.header-icons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+}
+
+
+.header-icons i {
+
+    font-size: 20px;
+
+    color: #666;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.header-icons i:hover {
+
+    color: #0d314e;
+
+}
+
+
+.header-icons img {
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 3px solid #0d314e;
+
+    transition: .3s;
+
+}
+
+
+.header-icons img:hover {
+
+    transform: scale(1.08);
+
+    box-shadow: 0 0 15px rgba(111,73,246,.4);
+
+}
+
+
+.header-icons span {
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #555;
+
+}
+
+
+
+/* ==================================================
+   CERTIFICADOS
+================================================== */
+
+.certificados {
+
+    width: 100%;
+
+}
+
+
+
+/* ==================================================
+   TÍTULO
+================================================== */
+
+.certificados-titulo {
+
+    margin-bottom: 30px;
+
+}
+
+
+.certificados-titulo h1 {
+
+    font-size: 32px;
+
+    color: #2d2d2d;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+
+}
+
+
+.certificados-linha {
+
+    width: 90px;
+
+    height: 4px;
+
+    background: #0d314e;
+
+    border-radius: 5px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.certificados-titulo p {
+
+    color: #777;
+
+    font-size: 16px;
+
+    margin: 0;
+
+}
+
+
+
+/* ==================================================
+   CARD PRINCIPAL
+================================================== */
+
+.certificados-card {
+
+    width: 100%;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 25px 20px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.06);
+
+}
+
+
+
+/* ==================================================
+   CADA CERTIFICADO
+================================================== */
+
+.certificado-item {
+
+    width: 100%;
+
+    min-height: 125px;
+
+    display: grid;
+
+    grid-template-columns:
+        105px
+        minmax(250px, 1fr)
+        150px
+        120px
+        110px;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 10px 5px;
+
+    border-bottom: 1px solid #e5e8eb;
+
+}
+
+
+.certificado-item:last-child {
+
+    border-bottom: none;
+
+}
+
+
+
+/* ==================================================
+   IMAGEM DO CERTIFICADO
+================================================== */
+
+.certificado-imagem {
+
+    width: 92px;
+
+    height: 92px;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    border: 1px solid #d7dce2;
+
+    background: #f4f5f6;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.certificado-imagem:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.12);
+
+}
+
+
+.certificado-imagem img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+
+/* ==================================================
+   INFORMAÇÕES
+================================================== */
+
+.certificado-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.certificado-info h2 {
+
+    color: #1e3557;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+
+    line-height: 1.3;
+
+}
+
+
+
+/* ==================================================
+   BOTÕES
+================================================== */
+
+.certificado-botoes {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.certificado-btn {
+
+    width: 45px;
+
+    height: 42px;
+
+    border: 1px solid #aeb9c7;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: #0d314e;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    transition: .25s;
+
+}
+
+
+.certificado-btn:hover {
+
+    background: #0d314e;
+
+    color: #ffffff;
+
+    border-color: #0d314e;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px rgba(13,49,78,.20);
+
+}
+
+
+
+/* ==================================================
+   DATA / HORAS / STATUS
+================================================== */
+
+.certificado-data,
+.certificado-horas,
+.certificado-status {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.certificado-data span,
+.certificado-horas span,
+.certificado-status span {
+
+    color: #7b8490;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+}
+
+
+.certificado-data strong,
+.certificado-horas strong,
+.certificado-status strong {
+
+    color: #334967;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+}
+
+
+
+/* ==================================================
+   STATUS CONCLUÍDO
+================================================== */
+
+.certificado-status strong {
+
+    color: #248b5b;
+
+    background: #e5f6ed;
+
+    width: fit-content;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+}
+
+
+
+/* ==================================================
+   MODAL
+================================================== */
+
+.certificado-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(10,25,40,.78);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .25s;
+
+    z-index: 9999;
+
+}
+
+
+.certificado-modal.aberto {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+
+/* ==================================================
+   CONTEÚDO DO MODAL
+================================================== */
+
+.certificado-modal-conteudo {
+
+    position: relative;
+
+    max-width: 1000px;
+
+    max-height: 90vh;
+
+    background: #ffffff;
+
+    padding: 12px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.35);
+
+}
+
+
+.certificado-modal-conteudo img {
+
+    display: block;
+
+    max-width: 100%;
+
+    max-height: 82vh;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+}
+
+
+
+/* ==================================================
+   BOTÃO FECHAR MODAL
+================================================== */
+
+.certificado-modal-fechar {
+
+    position: absolute;
+
+    top: -16px;
+
+    right: -16px;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #0d314e;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.25);
+
+    transition: .25s;
+
+    z-index: 2;
+
+}
+
+
+.certificado-modal-fechar:hover {
+
+    background: #0d314e;
+
+    color: #ffffff;
+
+    transform: rotate(90deg);
+
+}
+
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.footer {
+
+    margin-top: 70px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #E8E8E8;
+
+    padding-top: 50px;
+
+}
+
+
+.footer-container {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 40px;
+
+    padding: 0 40px 40px;
+
+}
+
+
+.footer-column h3 {
+
+    color: #0d314e;
+
+    margin-bottom: 20px;
+
+    font-size: 20px;
+
+}
+
+
+.footer-column p {
+
+    color: #666;
+
+    line-height: 28px;
+
+    font-size: 15px;
+
+}
+
+
+.footer-logo {
+
+    width: 180px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.footer-column ul {
+
+    list-style: none;
+
+}
+
+
+.footer-column ul li {
+
+    margin-bottom: 14px;
+
+}
+
+
+.footer-column ul li a {
+
+    text-decoration: none;
+
+    color: #666;
+
+    transition: .3s;
+
+}
+
+
+.footer-column ul li a:hover {
+
+    color: #0d314e;
+
+    padding-left: 6px;
+
+}
+
+
+.footer-column i {
+
+    color: #0d314e;
+
+    margin-right: 8px;
+
+}
+
+
+.social-icons {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 15px;
+
+}
+
+
+.social-icons a {
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #F3EEFF;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    transition: .3s;
+
+}
+
+
+.social-icons a i {
+
+    color: #0d314e;
+
+    font-size: 18px;
+
+    margin: 0;
+
+}
+
+
+.social-icons a:hover {
+
+    background: #0d314e;
+
+    transform: translateY(-5px);
+
+}
+
+
+.social-icons a:hover i {
+
+    color: #ffffff;
+
+}
+
+
+.footer-bottom {
+
+    text-align: center;
+
+    padding: 25px;
+
+    border-top: 1px solid #ECECEC;
+
+    color: #888;
+
+    font-size: 14px;
+
+}
+
+
+
+/* ==================================================
+   SCROLLBAR
+================================================== */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+    background: #ECECEC;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background: #0d314e;
+
+    border-radius: 30px;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #0d314e;
+
+}
+
+
+
+/* ==================================================
+   RESPONSIVIDADE
+================================================== */
+
+@media (max-width: 1100px) {
+
+
+    .certificado-item {
+
+        grid-template-columns:
+            95px
+            minmax(200px, 1fr)
+            130px
+            100px
+            90px;
+
+        gap: 15px;
+
+    }
+
+}
+
+
+
+@media (max-width: 900px) {
+
+
+    .search {
+
+        width: 350px;
+
+    }
+
+
+    .header-icons span {
+
+        display: none;
+
+    }
+
+
+    .certificado-item {
+
+        grid-template-columns:
+            95px
+            1fr;
+
+        gap: 15px;
+
+        padding: 20px 5px;
+
+    }
+
+
+    .certificado-data,
+    .certificado-horas,
+    .certificado-status {
+
+        grid-column: 2;
+
+    }
+
+
+    .certificado-data {
+
+        margin-top: -5px;
+
+    }
+
+
+    .certificado-horas,
+    .certificado-status {
+
+        display: none;
+
+    }
+
+}
+
+
+
+@media (max-width: 700px) {
+
+
+    .sidebar {
+
+        width: 80px;
+
+        padding: 20px 10px;
+
+    }
+
+
+    .logo img {
+
+        width: 60px;
+
+    }
+
+
+    .sidebar nav a {
+
+        justify-content: center;
+
+        padding: 15px 5px;
+
+    }
+
+
+    .sidebar nav a i {
+
+        width: auto;
+
+    }
+
+
+    .sidebar nav a {
+
+        font-size: 0;
+
+    }
+
+
+    .sidebar nav a i {
+
+        font-size: 20px;
+
+    }
+
+
+    .support-card {
+
+        display: none;
+
+    }
+
+
+    .container {
+
+        margin-left: 80px;
+
+        width: calc(100% - 80px);
+
+        padding: 25px 20px;
+
+    }
+
+
+    .header {
+
+        margin-bottom: 30px;
+
+    }
+
+
+    .search {
+
+        width: 100%;
+
+    }
+
+
+    .header-icons {
+
+        display: none;
+
+    }
+
+
+    .certificados-titulo h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .certificados-titulo p {
+
+        font-size: 14px;
+
+        line-height: 1.5;
+
+    }
+
+
+    .certificados-card {
+
+        padding: 15px 10px;
+
+        border-radius: 15px;
+
+    }
+
+
+    .certificado-item {
+
+        grid-template-columns:
+            75px
+            1fr;
+
+        gap: 12px;
+
+    }
+
+
+    .certificado-imagem {
+
+        width: 75px;
+
+        height: 75px;
+
+        border-radius: 12px;
+
+    }
+
+
+    .certificado-info h2 {
+
+        font-size: 14px;
+
+        margin-bottom: 9px;
+
+    }
+
+
+    .certificado-btn {
+
+        width: 40px;
+
+        height: 38px;
+
+        border-radius: 10px;
+
+        font-size: 15px;
+
+    }
+
+
+    .certificado-modal {
+
+        padding: 15px;
+
+    }
+
+
+    .certificado-modal-conteudo {
+
+        width: 100%;
+
+        padding: 7px;
+
+        border-radius: 10px;
+
+    }
+
+
+    .certificado-modal-fechar {
+
+        width: 35px;
+
+        height: 35px;
+
+        top: -10px;
+
+        right: -10px;
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+        padding: 0 25px 30px;
+
+    }
+
+}
+
+
+
+@media (max-width: 450px) {
+
+
+    .sidebar {
+
+        width: 65px;
+
+    }
+
+
+    .container {
+
+        margin-left: 65px;
+
+        width: calc(100% - 65px);
+
+        padding: 20px 12px;
+
+    }
+
+
+    .certificados-titulo h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .certificado-item {
+
+        grid-template-columns: 65px 1fr;
+
+    }
+
+
+    .certificado-imagem {
+
+        width: 65px;
+
+        height: 65px;
+
+    }
+
+
+    .certificado-info h2 {
+
+        font-size: 13px;
+
+    }
+
+}
