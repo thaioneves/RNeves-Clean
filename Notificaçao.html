@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"content="width=device-width, initial-scale=1.0">
+    <title>RNeves Personal Cleaner - Nome da Pagina</title>
+    <link
+        rel="stylesheet" href="./Notificaçao.css">
+    <link
+        rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" >
+</head>
+<body>
+
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <!-- LOGO -->
+        <div class="logo">
+            <img
+                src="./FOTOS/Logo colorido (1).png" alt="Logo">
+        </div>
+
+        <!-- MENU -->
+        <nav>
+            <a href="paginainicial.html">
+                <i class="fa-solid fa-house"></i>
+                Início
+            </a>
+
+            <a href="meuscursos.html">
+                <i class="fa-solid fa-book"></i>
+                Meus Cursos
+            </a>
+
+            <a href="curso.html">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Cursos
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-folder-open"></i>
+                Material de Apoio
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-headset"></i>
+                Suporte
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-certificate"></i>
+                Certificados
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                Configurações
+            </a>
+        </nav>
+
+        <!-- SUPORTE -->
+        <div class="support-card">
+            <h4>
+                Precisa de ajuda?
+            </h4>
+            <p>
+                Fale conosco pelo WhatsApp
+            </p>
+            <button>
+                <i class="fa-brands fa-whatsapp"></i>
+                Falar no WhatsApp
+            </button>
+        </div>
+    </aside>
+
+
+
+    <!-- CONTEÚDO PRINCIPAL-->
+    <main class="container">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <!-- PESQUISA -->
+            <div class="search">
+                <input
+                    type="text"placeholder="Pesquisar cursos, materiais...">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <!-- ÍCONES DO HEADER -->
+            <div class="header-icons">
+                <a href="notificacoes.html"> 
+                    <i class="fa-regular fa-bell" ></i>
+                </a>
+                <a href="configuracoes.html">
+                    <i class="fa-solid fa-gear"></i>
+                </a>
+                <img
+                    src="./FOTOS/Foto de perfil 1.2.jpg" alt="Usuário">
+                <span>
+                    Olá, Nome do Usuário
+                </span>
+            </div>
+        </header>
+
+<!-- NOTIFICAÇÕES -->
+<section class="notifications-page">
+
+    <!-- TÍTULO -->
+    <div class="notifications-heading">
+        <h1>
+            Notificação
+        </h1>
+        <div class="notifications-heading-line"></div>
+    </div>
+
+    <!-- LISTA DE NOTIFICAÇÕES -->
+    <div class="notifications-box">
+        <div class="notification-group">
+            <h2 class="notification-date">
+                Hoje
+            </h2>
+
+            <article class="notification-item">
+                <div class="notification-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <div class="notification-content">
+                    <h3>
+                        Novo curso
+                    </h3>
+                    <p>
+                        Curso “nome do curso”
+                    </p>
+                    <span>
+                        xmin atrás
+                    </span>
+                </div>
+
+                <a href="#" class="notification-link">
+                    <span>
+                        Ver curso
+                    </span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </article>
+
+            <article class="notification-item">
+                <div class="notification-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="notification-content">
+                    <h3>
+                        Parabéns! Módulo concluído
+                    </h3>
+                    <p>
+                        Você conclui módulo X.
+                    </p>
+                    <span>
+                        xmin atrás
+                    </span>
+                </div>
+                <a href="#" class="notification-link">
+                    <span>
+                        Ver progresso
+                    </span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </article>
+        </div>
+
+        <div class="notification-group">
+            <h2 class="notification-date">
+                Dois dias atrás
+            </h2>
+
+            <article class="notification-item">
+                <div class="notification-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="notification-content">
+                    <h3>
+                        Parabéns! Módulo concluído
+                    </h3>
+                    <p>
+                        Você conclui módulo X.
+                    </p>
+                    <span>
+                        xmin atrás
+                    </span>
+                </div>
+                <a href="#" class="notification-link">
+                    <span>
+                        Ver progresso
+                    </span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </article>
+        </div>
+
+        <div class="notifications-load-more">
+            <button type="button">
+                Carregar mais...
+            </button>
+        </div>
+    </div>
+</section>
+
+    <!-- FOOTER-->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <img
+                        src="./FOTOS/Logo colorido (2).png" alt="Logo RNeves" class="footer-logo">
+                    <p>
+                        Plataforma de cursos desenvolvida para capacitar profissionais da limpeza, oferecendo conteúdos práticos, materiais exclusivos e certificados.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>
+                        Links
+                    </h3>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Início
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Cursos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Material de Apoio
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Certificados
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Suporte
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>
+                        Contato
+                    </h3>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        contato@rneves.com
+                    </p>
+
+                    <p>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        (13) 99999-9999
+                    </p>
+
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Santos - SP
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>
+                        Redes Sociais
+                    </h3>
+
+                    <div class="social-icons">
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 RNeves Personal Cleaner • Todos os direitos reservados.
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

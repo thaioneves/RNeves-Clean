@@ -1,0 +1,1056 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f7f6f8;
+
+    color: #1e3557;
+}
+
+
+
+/* ==================================================
+   SIDEBAR
+================================================== */
+
+.sidebar {
+
+    width: 280px;
+
+    height: 100vh;
+
+    background: #ffffff;
+
+    border-right: 1px solid #e5e5e5;
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 30px 20px;
+
+}
+
+
+.logo {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+.logo img {
+
+    width: 170px;
+
+}
+
+
+.sidebar nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.sidebar nav a {
+
+    text-decoration: none;
+
+    color: #5b5b5b;
+
+    font-size: 16px;
+
+    padding: 15px 18px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    transition: .3s;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.sidebar nav a i {
+
+    font-size: 18px;
+
+    width: 20px;
+
+    text-align: center;
+
+}
+
+
+.sidebar nav a:hover {
+
+    background: #bed5df;
+
+    color: #0d314e;
+
+}
+
+
+.sidebar nav a.active {
+
+    background: #0d314e;
+
+    color: #ffffff;
+
+    font-weight: 600;
+
+}
+
+
+/* Barrinha lateral */
+
+.sidebar nav a::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 5px;
+
+    height: 100%;
+
+    background: #0d314e;
+
+    transform: scaleY(0);
+
+    transition: .3s;
+
+}
+
+
+.sidebar nav a:hover::before {
+
+    transform: scaleY(1);
+
+}
+
+
+.sidebar nav a.active::before {
+
+    background: #ffffff;
+
+    transform: scaleY(1);
+
+}
+
+
+
+/* ==================================================
+   SUPORTE
+================================================== */
+
+.support-card {
+
+    background: #bed5df;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    margin-top: 30px;
+
+}
+
+
+.support-card h4 {
+
+    color: #0d314e;
+
+    margin-bottom: 10px;
+
+}
+
+
+.support-card p {
+
+    font-size: 14px;
+
+    color: #666;
+
+    margin-bottom: 18px;
+
+}
+
+
+.support-card button {
+
+    width: 100%;
+
+    border: none;
+
+    background: #0d314e;
+
+    color: #ffffff;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: .3s;
+
+}
+
+
+.support-card button:hover {
+
+    background: #9f3f5d;
+
+}
+
+
+
+/* ==================================================
+   CONTAINER
+================================================== */
+
+.container {
+
+    margin-left: 280px;
+
+    width: calc(100% - 280px);
+
+    min-height: 100vh;
+
+    padding: 35px;
+
+}
+
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+
+/* ==================================================
+   PESQUISA
+================================================== */
+
+.search {
+
+    width: 500px;
+
+    height: 52px;
+
+    background: #ffffff;
+
+    border-radius: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+
+}
+
+
+.search input {
+
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    padding: 0 20px;
+
+    font-size: 15px;
+
+    transition: .3s;
+
+}
+
+
+.search input:focus {
+
+    background: #FAFAFF;
+
+}
+
+
+.search button {
+
+    width: 60px;
+
+    height: 100%;
+
+    border: none;
+
+    background: #0d314e;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.search button:hover {
+
+    background: #0d314e;
+
+}
+
+
+
+/* ==================================================
+   ÍCONES HEADER
+================================================== */
+
+.header-icons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+}
+
+
+.header-icons i {
+
+    font-size: 20px;
+
+    color: #666;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.header-icons i:hover {
+
+    color: #0d314e;
+
+}
+
+
+.header-icons img {
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 3px solid #0d314e;
+
+    transition: .3s;
+
+}
+
+
+.header-icons img:hover {
+
+    transform: scale(1.08);
+
+    box-shadow: 0 0 15px rgba(111,73,246,.4);
+
+}
+
+
+.header-icons span {
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #555;
+
+}
+
+
+
+/* ==================================================
+   PÁGINA DE NOTIFICAÇÕES
+================================================== */
+
+.notifications-page {
+    width: 100%;
+}
+
+
+/* ==================================================
+   TÍTULO
+================================================== */
+
+.notifications-heading {
+    margin-bottom: 22px;
+}
+
+.notifications-heading h1 {
+    color: #000000;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.notifications-heading-line {
+    width: 55px;
+    height: 4px;
+    background: #1e3557;
+    border-radius: 5px;
+    margin-top: 7px;
+}
+
+
+/* ==================================================
+   CAIXA PRINCIPAL
+================================================== */
+
+.notifications-box {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 26px 14px 10px 14px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+}
+
+
+/* ==================================================
+   GRUPO DE NOTIFICAÇÕES
+================================================== */
+
+.notification-group {
+    width: 100%;
+}
+
+.notification-group + .notification-group {
+    margin-top: 8px;
+}
+
+
+/* ==================================================
+   DATA
+================================================== */
+
+.notification-date {
+    color: #1e3557;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 18px 1px;
+}
+
+
+/* ==================================================
+   ITEM DE NOTIFICAÇÃO
+================================================== */
+
+.notification-item {
+    width: 100%;
+    min-height: 96px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 7px 28px 7px 0;
+
+    position: relative;
+}
+
+
+/* ==================================================
+   ÍCONE DA NOTIFICAÇÃO
+================================================== */
+
+.notification-icon {
+    width: 92px;
+    height: 92px;
+
+    flex-shrink: 0;
+
+    border: 1.5px solid #1e1e1e;
+    border-radius: 17px;
+
+    margin-right: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #1e1e1e;
+
+    background: #ffffff;
+}
+
+.notification-icon i {
+    font-size: 35px;
+    font-weight: 400;
+}
+
+
+/* ==================================================
+   INFORMAÇÕES
+================================================== */
+
+.notification-content {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.notification-content h3 {
+    color: #1e3557;
+    font-size: 20px;
+    font-weight: 700;
+
+    margin: 0 0 5px 0;
+
+    line-height: 1.25;
+}
+
+.notification-content p {
+    color: #1e3557;
+    font-size: 17px;
+    font-weight: 600;
+
+    margin: 0 0 5px 0;
+
+    line-height: 1.3;
+}
+
+.notification-content span {
+    color: #1e3557;
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+
+/* ==================================================
+   LINK DA NOTIFICAÇÃO
+================================================== */
+
+.notification-link {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-left: 25px;
+
+    color: #1e3557;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    text-decoration: underline;
+
+    transition: 0.2s ease;
+}
+
+.notification-link:hover {
+    color: #9f3f5d;
+}
+
+.notification-link i {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+/* ==================================================
+   ESPAÇAMENTO ENTRE NOTIFICAÇÕES
+================================================== */
+
+.notification-group:first-child .notification-item + .notification-item {
+    margin-top: 8px;
+}
+
+.notification-group:last-of-type {
+    margin-top: 10px;
+}
+
+
+/* ==================================================
+   BOTÃO CARREGAR MAIS
+================================================== */
+
+.notifications-load-more {
+    display: flex;
+    justify-content: center;
+
+    padding: 15px 0 0;
+}
+
+.notifications-load-more button {
+    width: 292px;
+    height: 46px;
+
+    background: #ffffff;
+
+    border: 1px solid #9baabd;
+    border-radius: 15px;
+
+    color: #1e3557;
+
+    font-size: 23px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.notifications-load-more button:hover {
+    background: #1e3557;
+    border-color: #1e3557;
+    color: #ffffff;
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.footer {
+    width: 100%;
+
+    margin-top: 50px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #e5e5e5;
+
+    color: #1e3557;
+}
+
+
+/* ==================================================
+   CONTAINER DO FOOTER
+================================================== */
+
+.footer-container {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        1fr
+        1.2fr
+        1fr;
+
+    gap: 50px;
+
+    padding: 45px 35px;
+
+}
+
+
+/* ==================================================
+   COLUNAS
+================================================== */
+
+.footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.footer-column h3 {
+
+    color: #0d314e;
+
+    font-size: 18px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.footer-column p {
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* ==================================================
+   LOGO
+================================================== */
+
+.footer-logo {
+
+    width: 170px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* ==================================================
+   LINKS
+================================================== */
+
+.footer-column ul {
+
+    list-style: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+.footer-column ul li a {
+
+    color: #666;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
+}
+
+
+.footer-column ul li a:hover {
+
+    color: #0d314e;
+
+}
+
+
+/* ==================================================
+   CONTATO
+================================================== */
+
+.footer-column p i {
+
+    width: 20px;
+
+    color: #0d314e;
+
+    margin-right: 6px;
+
+}
+
+
+/* ==================================================
+   REDES SOCIAIS
+================================================== */
+
+.social-icons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.social-icons a {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #0d314e;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+
+}
+
+
+.social-icons a:hover {
+
+    background: #9f3f5d;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* ==================================================
+   RODAPÉ INFERIOR
+================================================== */
+
+.footer-bottom {
+
+    width: 100%;
+
+    padding: 18px 35px;
+
+    border-top: 1px solid #e5e5e5;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 13px;
+
+}
+
+
+/* ==================================================
+   RESPONSIVIDADE
+================================================== */
+
+@media (max-width: 900px) {
+
+    .footer-container {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+        padding: 35px 25px;
+
+        gap: 30px;
+
+    }
+
+    .footer-bottom {
+
+        padding: 15px 20px;
+
+        line-height: 1.5;
+
+    }
+
+}
+
+/* ==================================================
+   RESPONSIVIDADE
+================================================== */
+
+@media (max-width: 1000px) {
+
+    .notification-item {
+        padding-right: 15px;
+    }
+
+    .notification-icon {
+        width: 78px;
+        height: 78px;
+        margin-right: 20px;
+    }
+
+    .notification-icon i {
+        font-size: 30px;
+    }
+
+    .notification-content h3 {
+        font-size: 18px;
+    }
+
+    .notification-content p {
+        font-size: 15px;
+    }
+
+    .notification-content span {
+        font-size: 14px;
+    }
+
+    .notification-link {
+        font-size: 15px;
+        gap: 9px;
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .notifications-heading h1 {
+        font-size: 28px;
+    }
+
+    .notifications-box {
+        padding: 22px 12px 10px;
+    }
+
+    .notification-item {
+        align-items: flex-start;
+        padding: 10px 5px;
+    }
+
+    .notification-icon {
+        width: 65px;
+        height: 65px;
+        margin-right: 15px;
+        border-radius: 13px;
+    }
+
+    .notification-icon i {
+        font-size: 24px;
+    }
+
+    .notification-content h3 {
+        font-size: 16px;
+    }
+
+    .notification-content p {
+        font-size: 14px;
+    }
+
+    .notification-content span {
+        font-size: 13px;
+    }
+
+    .notification-link {
+        margin-left: 10px;
+        font-size: 13px;
+    }
+
+    .notification-link i {
+        font-size: 15px;
+    }
+
+    .notifications-load-more button {
+        width: 240px;
+        font-size: 19px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .notification-item {
+        display: grid;
+        grid-template-columns: 60px 1fr;
+        column-gap: 14px;
+        row-gap: 10px;
+    }
+
+    .notification-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0;
+        grid-row: span 2;
+    }
+
+    .notification-content {
+        grid-column: 2;
+    }
+
+    .notification-link {
+        grid-column: 2;
+        margin: 0;
+        justify-content: flex-start;
+    }
+
+    .notification-date {
+        font-size: 16px;
+    }
+
+}
